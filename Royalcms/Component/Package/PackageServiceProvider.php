@@ -18,7 +18,7 @@ class PackageServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $this->royalcms->bindShared('package', function($royalcms)
+        $this->royalcms->singleton('package', function($royalcms)
         {
             return new PackageManager($royalcms);
         });
