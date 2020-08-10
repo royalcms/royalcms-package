@@ -3,6 +3,7 @@
 namespace Royalcms\Component\Package;
 
 use Royalcms\Component\Filesystem\Filesystem;
+use Royalcms\Component\Package\Contracts\LoaderInterface;
 
 class FileLoader implements LoaderInterface
 {
@@ -105,7 +106,7 @@ class FileLoader implements LoaderInterface
      * @param string $path
      * @param string $locale
      * @param string $group
-     * @return array
+     * @return
      */
     protected function loadPath($path, $group)
     {
