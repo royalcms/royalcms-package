@@ -1,4 +1,6 @@
-<?php namespace Royalcms\Component\Package\Struct;
+<?php
+
+namespace Royalcms\Component\Package\Struct;
 
 class Application {
     
