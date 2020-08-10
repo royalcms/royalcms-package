@@ -2,11 +2,16 @@
 
 namespace Royalcms\Component\Package;
 
+use Royalcms\Component\Package\Contracts\LoaderInterface;
+use Royalcms\Component\Package\Contracts\PackageInterface;
+
 class PluginPackage extends Package implements PackageInterface
 {
 
-    public function __construct($alias)
+    public function __construct(LoaderInterface $loader, $alias)
     {
+        parent::__construct($loader);
+
         $this->alias = $alias;
     }
 

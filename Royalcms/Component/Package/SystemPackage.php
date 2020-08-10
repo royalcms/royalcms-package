@@ -2,6 +2,9 @@
 
 namespace Royalcms\Component\Package;
 
+use Royalcms\Component\Package\Contracts\LoaderInterface;
+use Royalcms\Component\Package\Contracts\PackageInterface;
+
 class SystemPackage extends Package implements PackageInterface
 {
 
