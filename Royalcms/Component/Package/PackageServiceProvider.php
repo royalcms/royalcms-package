@@ -40,15 +40,16 @@ class PackageServiceProvider extends ServiceProvider implements DeferrableProvid
         $dir = static::guessPackageClassPath('royalcms/package');
 
         return [
+            $dir . "/Contracts/LoaderInterface.php",
+            $dir . "/Contracts/PackageInterface.php",
             $dir . "/PackageServiceProvider.php",
             $dir . "/PackageManager.php",
             $dir . "/FileLoader.php",
-            $dir . "/LoaderInterface.php",
             $dir . "/SystemPackage.php",
             $dir . "/Package.php",
-            $dir . "/PackageInterface.php",
             $dir . "/ApplicationPackage.php",
             $dir . "/Facades/Package.php",
+            $dir . "/Facades/Loader.php",
         ];
     }
 }
