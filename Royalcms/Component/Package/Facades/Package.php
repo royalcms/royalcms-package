@@ -7,7 +7,8 @@ use Royalcms\Component\Support\Facades\Facade;
 /**
  * @see \Royalcms\Component\Package\PackageManager
  */
-class Package extends Facade {
+class Package extends Facade
+{
 
 	/**
 	 * Get the registered name of the component.
