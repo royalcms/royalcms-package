@@ -31,7 +31,8 @@
                 "Royalcms\\Component\\Package\\PackageServiceProvider"
             ],
             "aliases": {
-                "RC_Package": "Royalcms\\Component\\Package\\Facades\\Package"
+                "RC_Package": "Royalcms\\Component\\Package\\Facades\\Package",
+                "RC_Loader": "Royalcms\\Component\\Package\\Facades\\Loader"
             }
         }
     },
