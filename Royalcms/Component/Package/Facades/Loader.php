@@ -1,6 +1,6 @@
 <?php
 
-namespace Royalcms\Component\Package;
+namespace Royalcms\Component\Package\Facades;
 
 use Royalcms\Component\Support\Facades\Facade;
 use RC_Config;
