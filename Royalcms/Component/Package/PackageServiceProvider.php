@@ -1,16 +1,13 @@
-<?php namespace Royalcms\Component\Package;
+<?php
 
+namespace Royalcms\Component\Package;
+
+use Illuminate\Contracts\Support\DeferrableProvider;
 use Royalcms\Component\Support\ServiceProvider;
 
-class PackageServiceProvider extends ServiceProvider {
-    
-    /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = true;
-    
+class PackageServiceProvider extends ServiceProvider implements DeferrableProvider
+{
+
     /**
      * Register the service provider.
      *
@@ -18,12 +15,11 @@ class PackageServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $this->royalcms->singleton('package', function($royalcms)
-        {
+        $this->royalcms->singleton('package', function ($royalcms) {
             return new PackageManager($royalcms);
         });
     }
-    
+
     /**
      * Get the services provided by the provider.
      *
