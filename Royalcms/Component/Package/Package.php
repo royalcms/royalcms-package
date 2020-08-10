@@ -1,51 +1,59 @@
-<?php namespace Royalcms\Component\Package;
+<?php
 
-class Package {
-    
+namespace Royalcms\Component\Package;
+
+use Royalcms\Component\Package\Contracts\LoaderInterface;
+
+class Package
+{
+
     /**
      * The environment loader implementation.
      *
-     * @var \Royalcms\Component\Package\LoaderInterface  $loader
+     * @var LoaderInterface $loader
      */
     protected $loader;
-    
+
     protected $packageId;
-    
+
     protected $packageName;
-    
+
     protected $directory;
-    
+
     protected $alias;
-    
+
     /**
      * The server environment instance.
      *
-     * @param  \Royalcms\Component\Package\LoaderInterface  $loader
+     * @param LoaderInterface $loader
      * @return void
      */
     public function __construct(LoaderInterface $loader)
     {
         $this->loader = $loader;
     }
-    
-    
-    
-    public function getPackageId() {
+
+
+    public function getPackageId()
+    {
         return $this->packageId;
     }
-    
-    public function getPackageName() {
+
+    public function getPackageName()
+    {
         return $this->packageName;
     }
 
-    public function getDirectory() {
+    public function getDirectory()
+    {
         return $this->directory;
     }
-    
-    public function getAlias() {
+
+    public function getAlias()
+    {
         return $this->alias;
     }
-    
+
 }
 
 // end

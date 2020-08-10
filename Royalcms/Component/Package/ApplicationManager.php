@@ -1,4 +1,6 @@
-<?php namespace Royalcms\Component\Package;
+<?php
+
+namespace Royalcms\Component\Package;
 
 use RC_Hook;
 
