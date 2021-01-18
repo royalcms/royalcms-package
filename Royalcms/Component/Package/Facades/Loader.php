@@ -630,7 +630,8 @@ class Loader extends Facade
             return false;
         }
 
-        $path = $royalcms->siteContentPath().DIRECTORY_SEPARATOR.'apps'.$dir;
+        $dir = ltrim($dir, '/\\');
+        $path = $royalcms->siteContentPath().DIRECTORY_SEPARATOR.'apps'.DIRECTORY_SEPARATOR.$dir;
 
         if (file_exists($path)) {
             return true;
@@ -656,7 +657,8 @@ class Loader extends Facade
             return false;
         }
 
-        $path = $royalcms->siteContentPath().DIRECTORY_SEPARATOR.'plugins'.$dir;
+        $dir = ltrim($dir, '/\\');
+        $path = $royalcms->siteContentPath().DIRECTORY_SEPARATOR.'plugins'.DIRECTORY_SEPARATOR.$dir;
 
         if (file_exists($path)) {
             return true;
